@@ -1,0 +1,25 @@
+{
+    "name" : "Pagination",
+    "version" : "0.1.0",
+    "description" : "pagination component create base react",
+    "keywords": [
+      "pagination,react,ReactJS,pagination-component,react-pagination"
+    ],
+    "main" : "./index.js",
+    "author" : {
+      "name" : "xuluxi"
+    },
+    "dependencies": {
+      "react" : ">0.13.0"
+    },
+    "devDependencies": {
+      "webpack" : "^1.5.3",
+      "jsx-loader" : "^0.12.2",
+      "css-loader" : "^0.16.0",
+      "style-loader" : "^0.12.3"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/xuluxi/react-pagination.git"
+    }
+}

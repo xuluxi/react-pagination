@@ -1,0 +1,72 @@
+// 分页组件样式
+#pagination {
+    background-color:#fbfbfb;
+    height:54px;
+    padding-top:15px;
+}
+#pagination ul {
+    list-style:none;
+    display:inline-block;
+    float:right;
+    padding:0;
+    margin:0;
+}
+#pagination ul li{
+    display:inline-block;
+    width:32px;
+    height:32px;
+    line-height:32px;
+    text-align:center;
+    border:1px solid #ddd;
+    border-radius:2px;
+    color:#00a2ea;
+    margin-right:4px;
+    cursor:pointer;
+}
+#pagination .paginate-current {
+    background-color:#00a2ea;
+    color:#fff;
+}
+#pagination .paginate-dot {
+    border:none;
+    cursor:default;
+}
+#pagination .next-page,#pagination .prev-page {
+    display:inline-block;
+    float:right;
+    width:64px;
+    height:32px;
+    line-height:32px;
+    text-align:center;
+    border:1px solid #ddd;
+    cursor:pointer;
+    color:#00a2ea;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+#pagination .next-page i,#pagination .prev-page i{
+    display:inline-block;
+    border:5px solid transparent;
+}
+#pagination .next-page i{
+    border-left:5px solid #00a2ea;
+    margin-left:4px;
+}
+#pagination .prev-page {
+    margin-right:4px;
+}
+#pagination .prev-page i{
+    border-right:5px solid #00a2ea;
+    margin-right:4px;
+}
+#pagination .unavailable {
+    cursor:default;
+    color:#ddd;
+}
+#pagination .unavailable.next-page i{
+    border-left:5px solid #ddd;
+}
+#pagination .unavailable.prev-page i{
+    border-right:5px solid #ddd;
+}
