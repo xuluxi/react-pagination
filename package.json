@@ -1,9 +1,13 @@
 {
-    "name" : "Pagination",
-    "version" : "0.1.0",
+    "name" : "react-pagination-cn",
+    "version" : "0.1.1",
     "description" : "pagination component create base react",
     "keywords": [
-      "pagination,react,ReactJS,pagination-component,react-pagination"
+      "pagination",
+      "react",
+      "ReactJS",
+      "pagination-component",
+      "react-pagination"
     ],
     "main" : "./index.js",
     "author" : {
@@ -14,9 +18,14 @@
     },
     "devDependencies": {
       "webpack" : "^1.5.3",
+      "react-tools" : "^0.13.3",
       "jsx-loader" : "^0.12.2",
       "css-loader" : "^0.16.0",
       "style-loader" : "^0.12.3"
+    },
+    "scripts" : {
+        "build" : "jsx ./src/Pagination.jsx > ./index.js",
+        "prepublish" : "npm run build" 
     },
     "repository": {
       "type": "git",
