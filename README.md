@@ -17,7 +17,7 @@ The css is in package folder, I haven't pack it in JS, you should add it by yous
 ```jsx
 
 var React = require('react');
-var DatePicker = require('react-pagination');
+var Pagination = require('react-pagination');
 
 React.render(<Pagination 
   totalPage={ 100 }
