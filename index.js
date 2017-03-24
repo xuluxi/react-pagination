@@ -7,7 +7,9 @@ var React = require('react');
 var Pagination = React.createClass({displayName: "Pagination",
     propTypes : {
         totalPage : React.PropTypes.number.isRequired,
-        selectPage : React.PropTypes.func.isRequired
+        selectPage : React.PropTypes.func.isRequired,
+        prevText: React.PropTypes.string.isRequired,
+        nextText: React.PropTypes.string.isRequired,
     },
     getInitialState : function() {
         return {
@@ -120,7 +122,7 @@ var Pagination = React.createClass({displayName: "Pagination",
     },
     _handlePrevClick : function() {
         var current = parseInt(this.state.current);
-        if (current === 1) return; 
+        if (current === 1) return;
         this.setState({
             current : (current - 1)
         });
@@ -128,7 +130,7 @@ var Pagination = React.createClass({displayName: "Pagination",
     },
     _handleNextClick : function() {
         var current = parseInt(this.state.current);
-        if (current === this.props.totalPage) return; 
+        if (current === this.props.totalPage) return;
         this.setState({
             current : (current + 1)
         });
@@ -140,9 +142,9 @@ var Pagination = React.createClass({displayName: "Pagination",
         var nextClass = (this.state.current === this.props.totalPage) ? 'next-page unavailable' : 'next-page';
         return (
             React.createElement("div", {id: "pagination"}, 
-                React.createElement("span", {className:  nextClass, onClick:  this._handleNextClick}, "next", React.createElement("i", null)), 
+                React.createElement("span", {className:  nextClass, onClick:  this._handleNextClick},  nextText, React.createElement("i", null)), 
                 React.createElement("ul", {onClick:  this._handlePageClick},  paginate ), 
-                React.createElement("span", {className:  prevClass, onClick:  this._handlePrevClick}, React.createElement("i", null), "prev")
+                React.createElement("span", {className:  prevClass, onClick:  this._handlePrevClick}, React.createElement("i", null),  prevText )
             )
         )
     }

@@ -142,9 +142,9 @@ var Pagination = React.createClass({
         var nextClass = (this.state.current === this.props.totalPage) ? 'next-page unavailable' : 'next-page';
         return (
             <div id="pagination">
-                <span className={ nextClass } onClick={ this._handleNextClick }>{ nextText }<i></i></span>
+                <span className={ nextClass } onClick={ this._handleNextClick }>{ this.props.nextText }<i></i></span>
                 <ul onClick={ this._handlePageClick }>{ paginate }</ul>
-                <span className={ prevClass } onClick={ this._handlePrevClick }><i></i>{ prevText }</span>
+                <span className={ prevClass } onClick={ this._handlePrevClick }><i></i>{ this.props.prevText }</span>
             </div>
         )
     }
